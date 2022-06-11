@@ -35,9 +35,9 @@ public class OnlineShop {
         try {
             System.out.println(k4.equals(k5));
         }
-            catch(NullPointerException exception){
-                System.out.println("k4 equals k5 wirft eine NullPointerExcebtion, da k4 = null");
-            }
+        catch(NullPointerException exception){
+            System.out.println("k4 equals k5 wirft eine NullPointerExcebtion, da k4 = null");
+        }
         System.out.println("k1 equals to k5? " + (k1.equals(k5)) + "\n");
 
         //Testen von equals
