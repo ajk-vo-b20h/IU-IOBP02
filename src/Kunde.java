@@ -77,6 +77,8 @@ public class Kunde {
     public boolean equals(Object o){
         if(this == o) return true;
 
+        if(this == null) return false;
+
         if(o instanceof Kunde){
             Kunde k = (Kunde) o;
             return kundennummer == k.kundennummer;
