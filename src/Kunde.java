@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /**
  * Klasse Kunde fuer den Onlineshop
  * Dient zum Lerneinstieg und zum eroeffnen von Kunden
@@ -7,13 +9,15 @@
  */
 
 public class Kunde {
+    private int kundennummer;
     private String vorname;
     private String nachname;
     private String geschlecht;
     private String geburtsdatum;
 
     //Konstruktor
-    public Kunde(String prename, String surname, String gender, String birth){
+    public Kunde(int client, String prename, String surname, String gender, String birth){
+        this.kundennummer = client;
         this.vorname = prename;
         this.nachname = surname;
         this.geschlecht = gender;
@@ -21,6 +25,10 @@ public class Kunde {
     }
 
     //Getter und Setter Methoden
+    public void setKundennummer(int kundennummer){this.kundennummer = kundennummer;}
+
+    public int getKundennummer() {return kundennummer;}
+
     public void setVorname(String prename){
         this.vorname = prename;
     }
@@ -58,10 +66,22 @@ public class Kunde {
      */
     @Override
     public String toString(){
-        return "Kunden-Objekt enthält foglende Daten: " + "\n" +
+        return "Kunden-Objekt enthaelt foglende Daten: " + "\n" +
                 "Vorname: " + vorname + "\n" +
                 "Nachname: " + nachname + "\n" +
                 "Geschlecht: " + geschlecht + "\n" +
                 "Geburtsdatum: " + geburtsdatum;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+
+        if(o instanceof Kunde){
+            Kunde k = (Kunde) o;
+            return kundennummer == k.kundennummer;
+        }
+        else
+            return super.equals(o);
     }
 }
