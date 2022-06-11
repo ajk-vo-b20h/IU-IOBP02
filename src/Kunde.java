@@ -86,4 +86,11 @@ public class Kunde {
         else
             return super.equals(o);
     }
+
+    @Override
+    public int hashCode() {
+        String s = this.vorname + this.nachname;
+        return s.hashCode();
+    }
+
 }

@@ -53,5 +53,18 @@ public class OnlineShop {
         catch(NullPointerException exception){
             System.err.println("k4 equals k5 wirft eine NullPointerException, da k4 = null");
         }
+
+        //Testen von hashCode
+        System.out.println("\n" + "HashCode ausgeben");
+        System.out.println("HashCode von k1 = " + (k1.hashCode()) + "\n" +
+                            "HashCode von k2 = " + (k2.hashCode()) + "\n" +
+                            "HashCode von k3 = " + (k3.hashCode()) + "\n" +
+                            "HashCode von k5 = " + (k5.hashCode()) + "\n");
+
+        System.out.println("\n" + "HashCode vergleichen");
+        System.out.println("HasCode von k1 = HashCode von k2? " + ((k1.hashCode()) == (k2.hashCode())) + "\n" +
+                            "HasCode von k2 = HashCode von k3? " + ((k2.hashCode()) == (k3.hashCode())) + "\n" +
+                            "HasCode von k3 = HashCode von k5? " + ((k3.hashCode()) == (k5.hashCode())) + "\n" +
+                            "HasCode von k1 = HashCode von k5? " + ((k1.hashCode()) == (k5.hashCode())) + "\n");
     }
 }
