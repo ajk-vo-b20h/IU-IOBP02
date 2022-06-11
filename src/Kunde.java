@@ -8,7 +8,7 @@ import java.util.Objects;
  * @version 1.0
  */
 
-public class Kunde {
+public class Kunde implements Comparable {
     private int kundennummer;
     private String vorname;
     private String nachname;
@@ -93,4 +93,12 @@ public class Kunde {
         return s.hashCode();
     }
 
+    @Override
+    public int compareTo(Object o) {
+        Kunde k = (Kunde) o;
+        if (nachname.equals(k.nachname))
+            return vorname.compareToIgnoreCase(k.vorname);
+        else
+            return nachname.compareToIgnoreCase(k.nachname);
+    }
 }

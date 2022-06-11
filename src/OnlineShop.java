@@ -66,5 +66,12 @@ public class OnlineShop {
                             "HasCode von k2 = HashCode von k3? " + ((k2.hashCode()) == (k3.hashCode())) + "\n" +
                             "HasCode von k3 = HashCode von k5? " + ((k3.hashCode()) == (k5.hashCode())) + "\n" +
                             "HasCode von k1 = HashCode von k5? " + ((k1.hashCode()) == (k5.hashCode())) + "\n");
+
+        //Testen von compareTo
+        System.out.println("compareTo testen");
+        System.out.println("k1 compare to k2? " + (k1.compareTo(k2)) + "\n" +
+                            "k2 compare to k3? " + (k2.compareTo(k3)) + "\n" +
+                            "k3 compare to k5? " + (k3.compareTo(k5)) + "\n" +
+                            "k1 compare to k5? " + (k1.compareTo(k5)) + "\n");
     }
 }
