@@ -12,6 +12,7 @@ public class OnlineShop {
         Kunde k3 = new Kunde(2222, "Barbera", "Beispiel", "w", "28.05.1986");
         Kunde k4 = null;
         Kunde k5 = k1;
+        Kunde k6 = k3.clone();
 
         /*Vergleich verschiedener komplexer Datentypen*/
         //Ausgabe der Kunden
@@ -73,5 +74,9 @@ public class OnlineShop {
                             "k2 compare to k3? " + (k2.compareTo(k3)) + "\n" +
                             "k3 compare to k5? " + (k3.compareTo(k5)) + "\n" +
                             "k1 compare to k5? " + (k1.compareTo(k5)) + "\n");
+
+        //Testen von clone()
+        System.out.println("clone () testen");
+        System.out.println(k6);
     }
 }

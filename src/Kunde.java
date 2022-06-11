@@ -8,7 +8,7 @@ import java.util.Objects;
  * @version 1.0
  */
 
-public class Kunde implements Comparable {
+public class Kunde implements Comparable, Cloneable {
     private int kundennummer;
     private String vorname;
     private String nachname;
@@ -100,5 +100,17 @@ public class Kunde implements Comparable {
             return vorname.compareToIgnoreCase(k.vorname);
         else
             return nachname.compareToIgnoreCase(k.nachname);
+    }
+
+    @Override
+    public Kunde clone(){
+        try{
+            Kunde k = (Kunde) super.clone();
+            return k;
+        }
+        catch (CloneNotSupportedException exception){
+            System.out.println("Das haette nicht passieren duerfen.");
+            return null;
+        }
     }
 }
