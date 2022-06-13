@@ -1,3 +1,6 @@
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  *Klasse OnlineShop mit der Main-Methode
  * Dient zur Uebung und zum Programmeinstieg
@@ -5,9 +8,15 @@
  * @author Andreas Kurth
  * @version 1.0
  **/
+
 public class OnlineShop {
+    private static Logger logger = LogManager.getRootLogger();
+
     public static void main(String[]args){
+        org.apache.log4j.BasicConfigurator.configure();
+
         Kunde k1 = new Kunde(1111,"Karl", "Rietmann", "m", "27.05.1986");
+        logger.info(k1);
         Kunde k2 = new Kunde(1111, "Karl", "Rietmann", "m", "27.05.1986");
         Kunde k3 = new Kunde(2222, "Barbera", "Beispiel", "w", "28.05.1986");
         Kunde k4 = null;
